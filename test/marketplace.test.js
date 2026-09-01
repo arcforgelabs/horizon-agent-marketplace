@@ -32,16 +32,23 @@ test("plugin versions stay aligned", async () => {
 test("payload includes the generic skill and Horizon-only overlay", async () => {
   const skill = await readFile(join(pluginRoot, "skills", "zavy", "SKILL.md"), "utf8");
   const account = await readFile(join(pluginRoot, "skills", "zavy", "ACCOUNT.md"), "utf8");
+  const accountFlat = account.split(/\s+/).join(" ");
   assert.match(skill, /If an installed `ACCOUNT\.md` is present/);
-  assert.match(account, /Parkside and Woodside/);
-  assert.match(account, /Horizon Pro Laboratories/);
-  assert.match(account, /Enter a Horizon Pro Laboratories tax invoice/);
-  assert.match(account, /treatment\/payment record/);
-  assert.match(account, /press \*\*Enter\*\*/);
-  assert.match(account, /duplicate staff names/);
-  assert.match(account, /If it is \*\*TBD\*\*/);
-  assert.match(account, /Completed lab work may be hidden/);
-  assert.doesNotMatch(account, /James Crawford|Dominic Leung|\b110\b|28th of August/i);
+  assert.match(accountFlat, /Parkside and Woodside/);
+  assert.match(accountFlat, /Horizon Pro Laboratories/);
+  assert.match(accountFlat, /Enter a Horizon Pro Laboratories tax invoice/);
+  assert.match(accountFlat, /treatment\/payment record/);
+  assert.match(accountFlat, /press \*\*Enter\*\*/);
+  assert.match(accountFlat, /duplicate staff names/);
+  assert.match(accountFlat, /If it is \*\*TBD\*\*/);
+  assert.match(accountFlat, /Completed lab work may be hidden/);
+  assert.match(accountFlat, /render and inspect the pages visually/);
+  assert.match(accountFlat, /Do not guess or silently switch sites/);
+  assert.match(accountFlat, /procedure label/);
+  assert.match(accountFlat, /concise invoice note/);
+  assert.match(accountFlat, /reset the viewport/);
+  assert.match(accountFlat, /bundled in-app browser/);
+  assert.doesNotMatch(accountFlat, /James Crawford|Dominic Leung|\b110\b|28th of August/i);
 });
 
 test("published files contain no obvious credentials", async () => {
