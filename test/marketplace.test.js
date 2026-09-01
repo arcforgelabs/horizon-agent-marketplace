@@ -36,6 +36,11 @@ test("payload includes the generic skill and Horizon-only overlay", async () => 
   assert.match(account, /Parkside and Woodside/);
   assert.match(account, /Horizon Pro Laboratories/);
   assert.match(account, /Enter a Horizon Pro Laboratories tax invoice/);
+  assert.match(account, /treatment\/payment record/);
+  assert.match(account, /press \*\*Enter\*\*/);
+  assert.match(account, /duplicate staff names/);
+  assert.match(account, /If it is \*\*TBD\*\*/);
+  assert.match(account, /Completed lab work may be hidden/);
   assert.doesNotMatch(account, /James Crawford|Dominic Leung|\b110\b|28th of August/i);
 });
 
