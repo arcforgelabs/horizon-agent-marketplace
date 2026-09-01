@@ -1,63 +1,40 @@
-# Horizon Pro Dental — Arc Forge Marketplace
+# Horizon Pro Dental — Shared AI Skills
 
-Public, unlisted agent plugins prepared by Arc Forge Labs for Horizon Pro
-Dental. This marketplace contains only Horizon-approved plugins and no patient
-records, credentials, or browser sessions.
+Company-managed AI skill portfolio prepared by Arc Forge Labs for
+**Horizon Pro Dental**. This public-unlisted marketplace contains only the
+skills approved for this company: `zavy`.
 
-## Codex — about 2 minutes
-
-Run these commands in a terminal:
+## Codex
 
 ```bash
 codex plugin marketplace add arcforgelabs/horizon-agent-marketplace
-codex plugin add horizon-zavy@arc-forge-horizon
+codex plugin add zavy@horizon-pro-dental-skills
 ```
 
-Start a new Codex task and ask: **Use Horizon Zavy and summarise the current
-screen.** Sign in to Zavy in the browser if needed; never paste a password or
-patient record into chat.
-
-## Claude Code — about 2 minutes
-
-Run these commands inside Claude Code:
+## Claude Code
 
 ```text
 /plugin marketplace add arcforgelabs/horizon-agent-marketplace
-/plugin install horizon-zavy@arc-forge-horizon
+/plugin install zavy@horizon-pro-dental-skills
 ```
 
-Run `/reload-plugins` if prompted, then start a new conversation and ask:
-**Use Horizon Zavy and summarise the current screen.**
+Run `/reload-plugins` if prompted and start a new conversation.
 
 ## Cursor
 
-In the team dashboard, open **Settings → Plugins → Import** and import:
-
-```text
-https://github.com/arcforgelabs/horizon-agent-marketplace
-```
-
-Publish **Horizon Zavy** as Optional or Default On and enable **Auto Refresh**.
+Import `https://github.com/arcforgelabs/horizon-agent-marketplace` as a Team Marketplace and enable Auto Refresh.
 
 ## Updates
 
-- Codex: `codex plugin marketplace upgrade arc-forge-horizon`, then reinstall
-  or update **Horizon Zavy** if offered.
-- Claude Code: `/plugin marketplace update arc-forge-horizon`, then update the
-  plugin in `/plugin`.
-- Cursor: enable Auto Refresh on the imported marketplace.
+- Codex: `codex plugin marketplace upgrade horizon-pro-dental-skills`
+- Claude Code: `/plugin marketplace update horizon-pro-dental-skills`
+- Cursor: enable Auto Refresh on the imported marketplace
 
-Open a new conversation after an update so the refreshed skill is loaded.
+Start a new conversation after installing or updating so the refreshed skills load.
 
-## Maintainer source sync
+## Visibility
 
-The published payload is generated from the private `arc-forge-tools` source.
-From this repository, run:
+This portfolio is public-unlisted: it is not included in Arc Forge's generic
+catalog, but anyone with the repository URL can download it.
 
-```bash
-npm run sync-source -- ../arc-forge-tools
-npm test
-```
-
-When the payload changes, the sync command bumps the patch version across all
-plugin and marketplace manifests. Review, commit, and push the generated update.
+This portfolio contains no credentials, customer records, or authenticated browser sessions.

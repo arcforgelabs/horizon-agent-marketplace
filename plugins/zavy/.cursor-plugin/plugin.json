@@ -1,0 +1,16 @@
+{
+  "name": "zavy",
+  "displayName": "Horizon Zavy",
+  "version": "0.1.0",
+  "description": "Operate Horizon Pro Dental's Zavy account with its approved workflows",
+  "license": "LicenseRef-Arc-Forge-Client",
+  "keywords": [
+    "zavy",
+    "dental",
+    "lab-work",
+    "horizon-pro-dental"
+  ],
+  "author": {
+    "name": "Arc Forge Labs"
+  }
+}

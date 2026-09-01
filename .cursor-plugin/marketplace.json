@@ -1,19 +1,19 @@
 {
-  "name": "arc-forge-horizon",
-  "displayName": "Arc Forge — Horizon",
+  "name": "horizon-pro-dental-skills",
+  "displayName": "Horizon Pro Dental \u2014 Shared AI Skills",
   "owner": {
     "name": "Arc Forge Labs",
     "email": "support@arcforge.au"
   },
   "metadata": {
-    "description": "Horizon Pro Dental's Arc Forge agent plugins",
+    "description": "Horizon Pro Dental company shared AI skills",
     "version": "0.1.0",
     "pluginRoot": "plugins"
   },
   "plugins": [
     {
-      "name": "horizon-zavy",
-      "source": "horizon-zavy",
+      "name": "zavy",
+      "source": "./plugins/zavy",
       "description": "Operate Horizon Pro Dental's Zavy account with its approved workflows"
     }
   ]

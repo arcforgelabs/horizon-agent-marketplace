@@ -1,14 +1,14 @@
 {
-  "name": "arc-forge-horizon",
+  "name": "horizon-pro-dental-skills",
   "interface": {
-    "displayName": "Arc Forge — Horizon"
+    "displayName": "Horizon Pro Dental \u2014 Shared AI Skills"
   },
   "plugins": [
     {
-      "name": "horizon-zavy",
+      "name": "zavy",
       "source": {
         "source": "local",
-        "path": "./plugins/horizon-zavy"
+        "path": "./plugins/zavy"
       },
       "policy": {
         "installation": "AVAILABLE",

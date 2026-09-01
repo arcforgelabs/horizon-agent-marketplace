@@ -7,12 +7,14 @@ const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const sourceRoot = resolve(process.argv[2] || join(repoRoot, "..", "arc-forge-tools"));
 const skillSource = join(sourceRoot, "components", "skills", "zavy");
 const accountSource = join(sourceRoot, "sub-accounts", "horizon-pro-dental", "ZAVY.md");
-const destination = join(repoRoot, "plugins", "horizon-zavy", "skills", "zavy");
+const destination = join(repoRoot, "plugins", "zavy", "skills", "zavy");
 
 const before = await digestTree(destination);
 await rm(destination, { recursive: true, force: true });
 await mkdir(dirname(destination), { recursive: true });
 await cp(skillSource, destination, { recursive: true });
+await rm(join(destination, "MODULE.json"), { force: true });
+await rm(join(destination, "SOURCE.json"), { force: true });
 await cp(accountSource, join(destination, "ACCOUNT.md"));
 const after = await digestTree(destination);
 
@@ -28,9 +30,9 @@ const version = `${major}.${minor}.${patch + 1}`;
 
 await updateJson(packagePath, (data) => ({ ...data, version }));
 for (const relativePath of [
-  "plugins/horizon-zavy/.codex-plugin/plugin.json",
-  "plugins/horizon-zavy/.claude-plugin/plugin.json",
-  "plugins/horizon-zavy/.cursor-plugin/plugin.json",
+  "plugins/zavy/.codex-plugin/plugin.json",
+  "plugins/zavy/.claude-plugin/plugin.json",
+  "plugins/zavy/.cursor-plugin/plugin.json",
 ]) {
   await updateJson(join(repoRoot, relativePath), (data) => ({ ...data, version }));
 }
@@ -42,7 +44,7 @@ for (const relativePath of [
     ...data,
     metadata: { ...data.metadata, version },
     plugins: data.plugins.map((plugin) =>
-      plugin.name === "horizon-zavy" && "version" in plugin
+      plugin.name === "zavy" && "version" in plugin
         ? { ...plugin, version }
         : plugin,
     ),

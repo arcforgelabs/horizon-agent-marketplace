@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "client": "horizon-pro-dental",
+  "display_name": "Horizon Pro Dental",
+  "marketplace_name": "horizon-pro-dental-skills",
+  "visibility": "public-unlisted",
+  "source": "sub-accounts/horizon-pro-dental/bundle.json",
+  "plugins": [
+    {
+      "plugin": "zavy",
+      "skill": "zavy",
+      "account_reference": "ZAVY.md",
+      "display_name": "Horizon Zavy"
+    }
+  ]
+}

@@ -4,17 +4,17 @@ import { join, resolve } from "node:path";
 import test from "node:test";
 
 const root = resolve(import.meta.dirname, "..");
-const pluginRoot = join(root, "plugins", "horizon-zavy");
+const pluginRoot = join(root, "plugins", "zavy");
 
-test("all marketplaces expose only Horizon Zavy", async () => {
+test("all marketplaces expose only the company-approved Zavy plugin", async () => {
   for (const relativePath of [
     ".agents/plugins/marketplace.json",
     ".claude-plugin/marketplace.json",
     ".cursor-plugin/marketplace.json",
   ]) {
     const manifest = JSON.parse(await readFile(join(root, relativePath), "utf8"));
-    assert.equal(manifest.name, "arc-forge-horizon");
-    assert.deepEqual(manifest.plugins.map((plugin) => plugin.name), ["horizon-zavy"]);
+    assert.equal(manifest.name, "horizon-pro-dental-skills");
+    assert.deepEqual(manifest.plugins.map((plugin) => plugin.name), ["zavy"]);
   }
 });
 
@@ -24,7 +24,7 @@ test("plugin versions stay aligned", async () => {
     const manifest = JSON.parse(
       await readFile(join(pluginRoot, `.${host}-plugin`, "plugin.json"), "utf8"),
     );
-    assert.equal(manifest.name, "horizon-zavy");
+    assert.equal(manifest.name, "zavy");
     assert.equal(manifest.version, packageJson.version);
   }
 });
