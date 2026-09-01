@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "source_repo": "local-session",
+  "source_path": "Zavy operational learnings captured from live Zavy work",
+  "source_state": "native",
+  "migrated_at": "2026-06-15",
+  "migration_note": "Created from general Zavy/Zavy360 operating patterns. Business-specific Horizon details intentionally excluded."
+}

@@ -1,0 +1,20 @@
+{
+  "name": "arc-forge-horizon",
+  "interface": {
+    "displayName": "Arc Forge — Horizon"
+  },
+  "plugins": [
+    {
+      "name": "horizon-zavy",
+      "source": {
+        "source": "local",
+        "path": "./plugins/horizon-zavy"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

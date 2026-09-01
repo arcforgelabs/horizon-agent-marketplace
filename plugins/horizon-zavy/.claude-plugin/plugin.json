@@ -1,0 +1,13 @@
+{
+  "name": "horizon-zavy",
+  "version": "0.1.0",
+  "description": "Operate Horizon Pro Dental's Zavy account with its approved workflows.",
+  "author": {
+    "name": "Arc Forge Labs",
+    "email": "support@arcforge.au"
+  },
+  "homepage": "https://github.com/arcforgelabs/horizon-agent-marketplace",
+  "repository": "https://github.com/arcforgelabs/horizon-agent-marketplace",
+  "license": "LicenseRef-Arc-Forge-Horizon",
+  "keywords": ["zavy", "dental", "lab-work", "horizon-pro-dental"]
+}

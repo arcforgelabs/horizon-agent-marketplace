@@ -1,0 +1,29 @@
+{
+  "name": "horizon-zavy",
+  "version": "0.1.0",
+  "description": "Operate Horizon Pro Dental's Zavy account with its approved workflows.",
+  "author": {
+    "name": "Arc Forge Labs",
+    "email": "support@arcforge.au",
+    "url": "https://github.com/arcforgelabs"
+  },
+  "homepage": "https://github.com/arcforgelabs/horizon-agent-marketplace",
+  "repository": "https://github.com/arcforgelabs/horizon-agent-marketplace",
+  "license": "LicenseRef-Arc-Forge-Horizon",
+  "keywords": ["zavy", "dental", "lab-work", "horizon-pro-dental"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Horizon Zavy",
+    "shortDescription": "Operate Horizon's Zavy account safely.",
+    "longDescription": "Adds Zavy platform guidance and Horizon Pro Dental's account-specific workflows for locations, online bookings, clinical administration, and laboratory invoices.",
+    "developerName": "Arc Forge Labs",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://github.com/arcforgelabs/horizon-agent-marketplace",
+    "defaultPrompt": [
+      "Summarise the current Horizon Zavy view without exposing patient details.",
+      "Help me enter a Horizon Pro Laboratories invoice safely.",
+      "Check a Horizon Zavy workflow before I make a change."
+    ]
+  }
+}

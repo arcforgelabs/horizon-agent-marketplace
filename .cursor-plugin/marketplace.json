@@ -1,0 +1,20 @@
+{
+  "name": "arc-forge-horizon",
+  "displayName": "Arc Forge — Horizon",
+  "owner": {
+    "name": "Arc Forge Labs",
+    "email": "support@arcforge.au"
+  },
+  "metadata": {
+    "description": "Horizon Pro Dental's Arc Forge agent plugins",
+    "version": "0.1.0",
+    "pluginRoot": "plugins"
+  },
+  "plugins": [
+    {
+      "name": "horizon-zavy",
+      "source": "horizon-zavy",
+      "description": "Operate Horizon Pro Dental's Zavy account with its approved workflows"
+    }
+  ]
+}

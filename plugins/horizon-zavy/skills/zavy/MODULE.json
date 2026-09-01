@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "name": "zavy-skill",
+  "path": "components/skills/zavy",
+  "category": "component",
+  "component_type": "skill",
+  "status": "prototype",
+  "source_state": "native",
+  "summary": "Operate Zavy/Zavy360: browser workflows, online bookings, appointment blockers, and partner API limits.",
+  "entrypoints": {
+    "skill": "SKILL.md"
+  },
+  "dependencies": [
+    "components/skills/chrome-devtools-mcp"
+  ],
+  "inputs": [
+    "agent task context",
+    "authenticated Zavy browser session when required"
+  ],
+  "outputs": [
+    "agent guidance",
+    "safe Zavy UI/API operation patterns"
+  ],
+  "harness_targets": [
+    "Codex",
+    "OpenClaw",
+    "Claude Code",
+    "Gemini"
+  ],
+  "data_boundary": "Do not commit secrets, cookies, patient data, screenshots containing PHI/PII, or business-specific billing/account details."
+}
